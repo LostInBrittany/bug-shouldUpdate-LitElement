@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>bug-should-update</title>
+    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="./bug-should-update.js"></script>
+  </head>
+  <body >
+    
+    <bug-should-update 
+        id="elem-1" name='Elem 1' 
+        ready-to-update></bug-should-update>
+    <p  style="cursor: pointer;"
+        onclick="document.querySelector('#elem-2').readyToUpdate = true">
+      Click me to update Elem 2
+    </p>
+    <bug-should-update 
+        id="elem-2" name='Elem 2'></bug-should-update>
+  </body>
+</html>
